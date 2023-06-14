@@ -1,12 +1,11 @@
 import basicSsl from '@vitejs/plugin-basic-ssl'
+import dns from 'dns'
+
+dns.setDefaultResultOrder('verbatim')
 
 /** @type {import('vite').UserConfig} */
 export default {
-  plugins: [
-    basicSsl()
-  ],
   server: {
-    https: true,
     port: 80,
   }
 }
