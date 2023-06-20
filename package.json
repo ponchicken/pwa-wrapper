@@ -17,5 +17,8 @@
   },
   "dependencies": {
     "@vkontakte/superappkit": "^1.60.0"
+  },
+  "resolutions": {
+    "es5-ext": "0.10.50"
   }
 }

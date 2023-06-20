@@ -23,6 +23,22 @@ Config.init({
   superAppToken
 });
 
+Config.onRequestSuperAppToken = (data) => {
+  console.log('onRequestSuperAppToken', data)
+}
+
+Config.onAuth = (data) => {
+  console.log('onAuth', data)
+}
+
+Config.onOpenApp = (data) => {
+  console.log('onOpenApp', data)
+}
+
+Config.onLogout = (data) => {
+  console.log('onLogout', data)
+}
+
 openMiniApp();
 
 function openMiniApp() {
@@ -31,5 +47,5 @@ function openMiniApp() {
   });
 
 
-  miniapp.open({}, "hash");
+  miniapp.open()
 }
