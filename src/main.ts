@@ -56,6 +56,7 @@ function openMiniApp() {
   /**
    * Событие должно отправляться после подготовки создания(подготовки) айфрейма, а именно miniapp.preload
    * Важно, чтобы выполнялись проверки
+   * this.config.origin === https://id.vk.com (для прода)
    *     if (!this.config.origin || event.origin !== this.config.origin) {
    *       return;
    *     }
@@ -64,7 +65,7 @@ function openMiniApp() {
    *       return;
    *     }
    *
-   *     if (!(event.data && event.data.type === BRIDGE_MESSAGE_TYPE_SDK)) {
+   *     if (!(event.data && event.data.type === 'vk-sak-sdk')) {
    *       return;
    *     }
    */
